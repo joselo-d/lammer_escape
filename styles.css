@@ -1,59 +1,85 @@
+/* Estilos generales del body */
 body {
     font-family: sans-serif;
     margin: 0 auto; /* Centra el body horizontalmente */
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6; /* Mejora la legibilidad del texto */
 }
 
+/* Estilos del header */
 header {
-    background-color: black; /* Establece el fondo a negro */
+    background-color: black;
     color: white;
     padding: 1em 20px;
-    text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Asegura que el header ocupe todo el ancho del body */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Apila el título y la navegación */
+    align-items: center; /* Centra horizontalmente los elementos */
+    justify-content: center; /* Centra verticalmente el contenido (en el eje principal) */
+    text-align: center; /* Asegura que el texto dentro esté centrado */
 }
 
+header h1 {
+    margin-bottom: 0.5em; /* Espacio entre el título y el menú */
+    font-size: 1.5em; /* Tamaño de fuente base para el título */
+}
+
+/* Estilos de la navegación principal */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 1em 0; /* Añade un poco de margen superior e inferior */
+    margin: 0;
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav li {
-    margin: 0 1em;
+    margin: 0.5em;
 }
+
 nav a {
     color: white;
     text-decoration: none;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Añade una transición suave al hover */
 }
 
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Ligero fondo al pasar el ratón */
+}
+
+/* Estilos del contenedor principal */
 .contenedor-principal {
     padding: 20px;
-    margin: 20px auto; /* Centra el contenedor principal y añade márgenes */
+    margin: 20px auto;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente dentro del contenedor */
-    text-align: center; /* Centra el texto dentro del contenedor */
-    max-width: 960px; /* Ancho máximo para el contenido principal */
+    align-items: center;
+    text-align: center;
+    max-width: 960px;
 }
 
+/* Estilos de las secciones dentro del contenedor principal */
 section {
-    width: 100%; /* Las secciones ocupan el ancho del contenedor principal */
-    padding: 20px 0; /* Reduce el margen vertical de las secciones */
-    margin-bottom: 20px; /* Añade margen inferior entre secciones */
-    border-bottom: 1px solid #eee; /* Añade una línea divisoria entre secciones */
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }
 
 section:last-child {
-    border-bottom: none; /* Elimina la línea inferior de la última sección */
-    margin-bottom: 0; /* Elimina el margen inferior de la última sección */
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
 section img {
@@ -61,18 +87,24 @@ section img {
     height: auto;
     margin-bottom: 15px;
     border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ligera sombra a las imágenes */
 }
 
-h2 {
+section h2 {
     color: #333;
+    margin-top: 0; /* Elimina el margen superior predeterminado */
+    margin-bottom: 0.75em; /* Espacio inferior para el título de la sección */
+    border-bottom: 2px solid #ddd; /* Línea inferior más sutil */
+    padding-bottom: 0.5em;
 }
 
+/* Estilos de la galería de imágenes */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     margin-top: 20px;
-    width: 100%; /* La galería ocupa el ancho del contenedor principal */
+    width: 100%;
 }
 
 .gallery img {
@@ -80,23 +112,31 @@ h2 {
     height: auto;
     border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out; /* Añade una pequeña animación al pasar el ratón */
 }
+
+.gallery img:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* Estilos del footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 1em 20px; /* Añade un poco de padding lateral */
+    padding: 1em 20px;
     text-align: center;
     font-size: 0.9em;
-    margin-top: 20px; /* Añade un poco de margen superior */
+    margin-top: 20px;
 }
 
 .footer-content {
-    max-width: 960px; /* Limita el ancho del contenido del footer */
+    max-width: 960px;
     margin: 0 auto;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centra el contenido del footer */
 }
 
 .footer-content p {
@@ -109,13 +149,106 @@ footer {
     margin: 0.5em 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-content nav li {
-    margin: 0 1em;
+    margin: 0 0.75em;
 }
 
 .footer-content nav a {
-    color: white; /* Cambia el color de los enlaces del footer a blanco */
+    color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content nav a:hover {
+    color: #ddd;
+}
+
+/* Media queries para la responsividad */
+
+/* Pantallas más grandes (>= 768px) */
+@media (min-width: 768px) {
+    header {
+        flex-direction: column; /* Apila el título y la navegación */
+        align-items: center; /* Centra horizontalmente los elementos */
+        justify-content: center; /* Centra verticalmente el contenido */
+        padding: 2em 30px; /* Aumenta el padding vertical */
+        text-align: center; /* Asegura que el texto dentro esté centrado */
+    }
+
+    header h1 {
+        font-size: 2em; /* Título más grande en pantallas grandes */
+        margin-bottom: 0.75em; /* Espacio entre título y menú */
+    }
+
+    nav ul {
+        justify-content: center; /* Centra el menú horizontalmente */
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        margin: 0 1em;
+    }
+}
+
+/* Pantallas pequeñas (<= 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 15px;
+        text-align: center; /* Centra el título en pantallas pequeñas */
+    }
+
+    header h1 {
+        margin-bottom: 0.5em;
+        font-size: 1.75em; /* Título ligeramente más pequeño en móviles */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0.7em 0;
+        width: 100%; /* Los elementos del menú ocupan todo el ancho */
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .contenedor-principal {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Columnas más pequeñas en móviles */
+        gap: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content nav li {
+        margin: 0.5em 0;
+    }
 }
