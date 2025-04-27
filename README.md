@@ -1,2 +1,2 @@
-# lammer esacpe
+# lammer escape
 pagina ciberseguridad etc
