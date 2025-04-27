@@ -1,22 +1,24 @@
 body {
     font-family: sans-serif;
-    margin: 0;
+    margin: 0 auto; /* Centra el body horizontalmente */
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: black; /* Establece el fondo a negro */
     color: white;
-    padding: 1em 0;
+    padding: 1em 20px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que el header ocupe todo el ancho del body */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1em 0; /* Añade un poco de margen superior e inferior */
     display: flex;
     justify-content: center;
 }
@@ -24,29 +26,40 @@ nav ul {
 nav li {
     margin: 0 1em;
 }
-
 nav a {
     color: white;
     text-decoration: none;
 }
 
-section {
+.contenedor-principal {
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto; /* Centra el contenedor principal y añade márgenes */
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Centra el texto dentro de la sección */
-
-
+    align-items: center; /* Centra el contenido horizontalmente dentro del contenedor */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    max-width: 960px; /* Ancho máximo para el contenido principal */
 }
+
+section {
+    width: 100%; /* Las secciones ocupan el ancho del contenedor principal */
+    padding: 20px 0; /* Reduce el margen vertical de las secciones */
+    margin-bottom: 20px; /* Añade margen inferior entre secciones */
+    border-bottom: 1px solid #eee; /* Añade una línea divisoria entre secciones */
+}
+
+section:last-child {
+    border-bottom: none; /* Elimina la línea inferior de la última sección */
+    margin-bottom: 0; /* Elimina el margen inferior de la última sección */
+}
+
 section img {
-    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
     border-radius: 4px;
 }
 
@@ -59,6 +72,7 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     margin-top: 20px;
+    width: 100%; /* La galería ocupa el ancho del contenedor principal */
 }
 
 .gallery img {
@@ -67,18 +81,17 @@ h2 {
     border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-/* ... otros estilos ... */
-
 footer {
     background-color: #333;
     color: white;
-    padding: 1em 0;
+    padding: 1em 20px; /* Añade un poco de padding lateral */
     text-align: center;
     font-size: 0.9em;
+    margin-top: 20px; /* Añade un poco de margen superior */
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 960px; /* Limita el ancho del contenido del footer */
     margin: 0 auto;
     padding: 10px 20px;
     display: flex;
@@ -103,6 +116,6 @@ footer {
 }
 
 .footer-content nav a {
-    color: black;
+    color: white; /* Cambia el color de los enlaces del footer a blanco */
     text-decoration: none;
 }

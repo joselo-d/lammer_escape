@@ -1,0 +1,250 @@
+/* Estilos para la página de comunidad */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1.5em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+.pagina-comunidad {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 960px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 2.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {
+    color: #28a745; /* Verde para la comunidad */
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+#bienvenida img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.foro-categoria {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    border: 1px solid #eee;
+}
+
+.foro-categoria h3 {
+    color: #007bff; /* Azul para títulos de foro */
+    margin-top: 0;
+}
+
+.miembro-card {
+    display: inline-block;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 150px;
+}
+
+.miembro-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.miembro-card h4 {
+    color: #555;
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.evento-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    border: 1px solid #eee;
+}
+
+.evento-card h3 {
+    color: #e44d26; /* Naranja/rojo para eventos */
+    margin-top: 0;
+}
+
+.fecha-evento {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.pagina-comunidad ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 1em;
+}
+
+.pagina-comunidad li {
+    margin-bottom: 0.5em;
+}
+
+.boton-comunidad, .boton-foro, .boton-secundario, .boton-evento {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.boton-comunidad {
+    background-color: #28a745; /* Verde para la comunidad */
+}
+
+.boton-comunidad:hover {
+    background-color: #1e7e34;
+}
+
+.boton-foro {
+    background-color: #007bff; /* Azul para foros */
+}
+
+.boton-foro:hover {
+    background-color: #0056b3;
+}
+
+.boton-secundario {
+    background-color: #6c757d; /* Gris secundario */
+}
+
+.boton-secundario:hover {
+    background-color: #545b62;
+}
+
+.boton-evento {
+    background-color: #e44d26; /* Naranja/rojo para eventos */
+}
+
+.boton-evento:hover {
+    background-color: #c83d1a;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 30px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content p {
+    margin: 0.5em 0;
+}
+
+.footer-content nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content nav li {
+    margin: 0 1em;
+}
+
+.footer-content nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content nav a:hover {
+    color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin: 0.5em 0;
+    }
+    .miembro-card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

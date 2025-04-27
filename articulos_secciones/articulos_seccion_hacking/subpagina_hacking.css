@@ -1,0 +1,194 @@
+/* Estilos generales para la subpágina de hacking */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1.5em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+main {
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 960px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-top: 2em;
+    line-height: 1.2;
+}
+
+h1:first-of-type {
+    margin-top: 0;
+}
+
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    margin-top: 1.5em;
+    color: #555;
+}
+
+section {
+    margin-bottom: 2.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.imagen-destacada {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 1.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.lista-herramientas {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 1em;
+}
+
+.lista-herramientas li {
+    margin-bottom: 0.7em;
+    line-height: 1.5;
+}
+
+ol.lista-herramientas {
+    list-style-type: decimal;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content p {
+    margin: 0.7em 0;
+}
+
+.footer-content nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.7em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content nav li {
+    margin: 0 1.5em;
+}
+
+.footer-content nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content nav a:hover {
+    color: #ddd;
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+    main {
+        padding: 40px;
+        margin: 40px auto;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+        padding-bottom: 0.8em;
+        margin-bottom: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        margin-top: 2em;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-content p {
+        margin: 0;
+    }
+
+    .footer-content nav ul {
+        margin: 0;
+    }
+}
