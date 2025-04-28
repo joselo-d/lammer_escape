@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -6,42 +5,59 @@ body {
     padding: 0;
     color: #333;
 }
-header{
-    display:flex;
-    background-color: rgb(127, 146, 255);
-    align-items: center;
-    justify-content: space-between;
 
+header {
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente en pantallas pequeñas */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    background-color: rgb(127, 146, 255);
+    padding: 10px 20px; /* Reducir el padding vertical en general */
+    text-align: center; /* Centrar el texto dentro del header */
 }
-header a i {
+
+header h1 {
+    font-size: 2em;
     color: white;
-    font-size: 3em;
-    padding: 0.5em;
+    margin: 0.5em 0;
 }
+
 header nav ul {
     display: flex;
-    gap: 1.1em
-}
-header nav ul li {
-    color: white;
-}
-h2{
-    color: rgb(127, 146, 255);
-   text-align: center;
+    gap: 1em; /* Reducir el espacio entre los enlaces en general */
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0; /* Añadir un poco de margen vertical a la navegación */
 }
 
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 0.5em 0.8em; /* Añadir un poco de padding a los enlaces */
+    border-radius: 5px; /* Opcional: añadir esquinas redondeadas a los enlaces */
+}
+
+header nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Opcional: feedback visual al pasar el ratón */
+}
+
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: rgb(127, 146, 255);
+    text-align: center;
+}
 
 footer {
     background-color: #f8f9fa;
-    padding: 2rem;
+    padding: 2rem 20px;
     border-top: 2px solid #e0e0e0;
-}
-
-.contacto {
-    max-width: 600px;
-    margin: 0 auto;
     text-align: center;
 }
+
 
 .contacto h2 {
     font-size: 2rem;
@@ -85,7 +101,7 @@ footer {
 
 .formulario-contacto input,
 .formulario-contacto textarea {
-    width: 100%;
+    width: calc(100% - 16px);
     padding: 0.8rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
@@ -113,7 +129,26 @@ footer {
     background-color: #0056b3;
 }
 
+/* Media query para pantallas de hasta 600px */
 @media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Asegurar que los elementos estén apilados */
+        text-align: center; /* Centrar el texto */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Apilar los enlaces verticalmente */
+        align-items: center; /* Centrar los enlaces */
+        gap: 0.5em; /* Reducir aún más el espacio entre enlaces */
+        margin-top: 0.5em; /* Añadir un poco de espacio entre el título y la navegación */
+        margin-bottom: 0.5em;
+    }
+
+    header nav ul li {
+        width: 100%; /* Hacer que cada enlace ocupe el ancho completo */
+        text-align: center; /* Centrar el texto de los enlaces */
+    }
+
     .contacto h2 {
         font-size: 1.8rem;
     }
