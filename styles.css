@@ -10,7 +10,7 @@ body {
 
 /* Estilos del header */
 header {
-    background-color: black;
+   background: linear-gradient(135deg, #000000, #434343);
     color: white;
     padding: 1em 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -251,4 +251,5 @@ footer {
     .footer-content nav li {
         margin: 0.5em 0;
     }
+
 }
